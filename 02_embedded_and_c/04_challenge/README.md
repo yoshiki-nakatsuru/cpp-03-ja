@@ -1,12 +1,12 @@
-# Challenge 4
+# チャレンジ4
 
-## Task 1
+## タスク1
 
-Let's consider an embedded system that controls a simple LED light. The LED can be turned on and off using an embedded C library. We'll create a C++ class that utilizes this C library to control the LED light.
+シンプルなLEDライトを制御する組み込みシステムを考えてみましょう。組み込みCライブラリを使用して、LEDのオンとオフを切り替えることができます。このCライブラリを使用して、LEDライトを制御するC++クラスを作成してください。
 
-### Embedded C Library
+### 組み込みCライブラリ
 
-First, let's create an embedded C library that simulates the LED control.
+最初に、LED制御をシミュレートする組み込みCライブラリを作成しましょう。
 
 #### led_controller.c:
 
@@ -48,40 +48,40 @@ bool led_get_state(void);
 #endif // LED_CONTROLLER_H
 ```
 
-Let's first create a static library from the above led_controller code.
+上記の `led_controller` コードから静的ライブラリを作成しましょう。
 
-First we compile our led_controller.c file using the -c flag, which tells the compiler to compile our `led_controller.c` into an object file without performing linking:
+まず、-cフラグを使用して、`led_controller.c` ファイルをコンパイルします。このフラグは、リンクを実行せずに `led_controller.c` をコンパイルしてオブジェクトファイルを作成するようコンパイルに指示するものです。
 
 ```bash
 gcc -c -Wall -Werror -Wextra led_controller.c
 ```
 
-This will give us the `led_controller.o` object file.
+このコマンドで `led_controller.o` オブジェクトファイルが作成されます。
 
-Next, we create a static library using the `ar` command, passing it the object files we would like to include in our library:
+次に、`ar` コマンドを使用して静的ライブラリを作成します (ライブラリに含めるオブジェクトファイルをこのコマンドに渡します)。
 
 ```bash
 ar -rcs libledcontroller.a led_controller.o
 ```
 
-This will create the `libledcontroller.a` static library that we can link into our C++ program later.
+静的ライブラリ `libledcontroller.a` が作成されます。このライブラリを後でC++プログラムにリンクできます。
 
-Once we have written our C++ program, our final step will be to compile our C++ program and link our `libledcontroller.a` static library:
+C++プログラムを作成したら、最後にC++プログラムをコンパイルして静的ライブラリ `libledcontroller.a` をリンクします。
 
 ```bash
 g++ -o main -L. -lledcontroller main.cpp led_controller.cpp
 ```
 
-The `-L` flag specifies a path containing the libraries. The `-l` flag specifies the name of the library, omitting the leading 'lib' and trailing '.a'.
+`-L` フラグではライブラリを含むパスを指定します。`-l` フラグではライブラリの名前を指定します (ライブラリの先頭の「lib」と末尾の「.a」を省略しています)。
 
-## Task 2
+## タスク2
 
-Wrap the LED controller C library function declarations using `extern "C"`.
+`extern "C"` を使用して、LEDコントローラーのCライブラリ関数宣言をラップしてください。
 
-## Task 3
+## タスク3
 
-Create a C++ class called `LedController` that utilizes the C library to control the LED light. Implement member functions to `initialize`, `turn_on`, `turn_off`, and `get` the LED state.
+`LedController` という名前のC++クラスを作成してください。このクラスでは、上記のCライブラリを使用してLEDライトを制御します。LEDの初期化、オン、オフ、状態の取得を行うためのメンバ関数をそれぞれ `initialize`、`turn_on`、`turn_off`、`get` という名前で実装します。
 
-## Task 4
+## タスク4
 
-Create a C++ program that uses the `LedController` class to control the LED light. Turn on the LED, print its state, turn off the LED, and print its state again.
+`LedController` クラスを使用して、LEDライトを制御するC++プログラムを作成してください。LEDをオンにしてその状態を出力し、LEDをオフにしてその状態をもう一度出力します。

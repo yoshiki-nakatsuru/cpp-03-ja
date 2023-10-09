@@ -1,3 +1,3 @@
-# Challenge 2
+# チャレンジ2
 
-Create two abstract classes called `TemperatureSensor` and `PressureSensor`, each with a pure virtual function `read` that returns a `temperature::kelvin` and `pressure::psi`, respectively. Derive `CPUTemperature`, `CabinTemperature`, and `TirePressure` from the appropriate base types. Implement the `read()` function for each derived class, simulating reading temperature and pressure values. Bonus points for using unit types instead of bare `double`s or `float`s.
+`TemperatureSensor` と `PressureSensor` という2つの抽象クラスを作成し、それぞれのクラスで `temperature::kelvin` と `pressure::psi` を返す純粋仮想関数 `read` を書いてください。適切な基底クラスから `CPUTemperature`、`CabinTemperature`、`TirePressure` を派生させ、温度と気圧値の読み取りをシミュレートする `read()` 関数を各派生クラスに実装します。`double` や `float` をそのまま使わずにUnit型を使用すると加点されます。

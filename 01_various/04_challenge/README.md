@@ -1,33 +1,33 @@
-# Challenge 4: Smart Pointer Implementation
+# チャレンジ4: スマートポインタの実装
 
-## Task 1
+## タスク1
 
-Implement a simplified version of a smart pointer class that mimics the behavior of `std::unique_ptr`. The class should manage the ownership of a dynamically allocated integer.
+`std::unique_ptr` の動作を模倣したシンプルなスマートポインタクラスを実装してください。このクラスでは動的に割り当てられた整数の所有権を管理する必要があります。
 
-### Requirements
+### 要件
 
-- Your class should be named `unique_int_ptr`.
-- Implement constructor(s) to allocate an integer on the heap.
-- Implement a destructor to clean up the dynamically allocated memory.
-- Implement a `get` method to return the stored pointer.
-- Implement a `release` method that relinquishes control of the pointer. In other words, this method will return the stored pointer and set the pointer within the class to `nullptr` to prevent it being used again.
+- クラスの名前は `unique_int_ptr` とします。
+- ヒープに整数を割り当てるコンストラクタを実装します。
+- 動的に割り当てられたメモリをクリーンアップするデストラクタを実装します。
+- 格納されたポインタを返す `get` メソッドを実装します。
+- ポインタの制御を放棄する `release` メソッドを実装します。このメソッドでは格納されたポインタを返し、クラス内でポインタを `nullptr` に設定して再び使用されないようにします。
 
-## Task 2
+## タスク2
 
-In order for us to be able to easily dereference our `unique_int_ptr` to use the underlying value, we need to define our own `operator*` for this class. This task is to define `operator*`.
+`unique_int_ptr` を簡単に間接参照して参照先の値を使用できるようにするには、このクラスに独自の `operator*` を定義する必要があります。このタスクでは、`operator*` を定義します。
 
-### Requirements
+### 要件
 
-- An instance of your class should be able to be used like so:
+- クラスのインスタンスを次のように使用できるようにしてください。
   ```cpp
   unique_int_ptr my_int(3);
   std::cout << *my_int << std::endl;
   ```
 
-## Task 3
+## タスク3
 
-Create a second class template version of the class you created in the previous tasks that manages any built-in data type that is passed in by the user.
+前のタスクで作成したクラスの副次的なクラステンプレートを作成し、ユーザーが渡した組み込みのデータ型を管理してください。
 
-### Requirements
+### 要件
 
-- Your class should be named `unique_ptr`.
+- クラスの名前は `unique_ptr` としてください。

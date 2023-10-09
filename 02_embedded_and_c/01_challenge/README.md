@@ -1,3 +1,3 @@
-# Challenge 1
+# チャレンジ1
 
-There are several popular libraries aimed at providing utilities and containers for embedded C++ programs. These libraries may offer alternatives to standard template library containers such as `std::vector` that are safer to use in an embedded context, usually due to their avoidance of dynamic memory allocation, memory allocators and memory pools that make use of static memory and again avoid dynamic memory allocation, etc. Do some research and provide links to a couple of libraries that appear useful.
+組み込みC++プログラム用のユーティリティとコンテナを提供している評価の高いライブラリがいくつかあります。これらのライブラリでは `std::vector` のような標準テンプレートライブラリのコンテナの代わりとなる機能を提供していることがあります。一般的にこのような代替機能は、実行時にシステムのメモリを大量に使用する動的メモリ割り当てを回避しているため、組み込みシステムで安全に使用できます。組み込みシステム用のライブラリを調査して、役に立つと思われるライブラリへのリンクを書いてください。
