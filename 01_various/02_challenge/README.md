@@ -1,3 +1,3 @@
-# Challenge 2
+# チャレンジ2
 
-Write a variadic function template called sum that takes any number of integer arguments and returns their sum. You can assume that the arguments are integers and the number of arguments is greater than 0.
+任意の数の整数型引数を受け取って、それらの合計を返す可変引数の関数テンプレート `sum` を作成してください。引数は整数で、引数の数は1個以上あるものとします。

@@ -1,21 +1,21 @@
-# Challenge 1
+# チャレンジ1
 
-Create a `Timer` class that measures the time elapsed between its construction and destruction. Use the RAII idiom to start the timer when the object is created and stop the timer when the object is destroyed. The class should print the elapsed time in milliseconds when the object is destroyed.
+オブジェクトの作成から破棄までの経過時間を計測する `Timer` クラスを作成してください。RAIIの手法に沿って、オブジェクトの作成時にタイマーを起動し、オブジェクトの破棄時にタイマーを停止します。そして、オブジェクトが破棄されたときに、経過時間をミリ秒単位で表示するようにします。
 
-Begin with the following code as a starting point:
+次のコードをベースに作成してください。
 
 ```cpp
 #include <chrono>
 
 class Timer {
 public:
-    // TODO
+    // コードを入力してください
 private:
-    // TODO
+    // コードを入力してください
 };
 
 int main() {
     Timer timer;
-    // TODO
+    // コードを入力してください
 }
 ```

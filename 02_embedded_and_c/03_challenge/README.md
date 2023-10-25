@@ -1,13 +1,13 @@
-# Challenge 3
+# チャレンジ3
 
-## Task 1
+## タスク1
 
-Create an enum class `TrafficLight` representing the different states of a traffic light (red, yellow, and green). Write a function that takes a traffic light state as an argument and returns the duration of that state in seconds.
+信号機の状態 (赤、黄、青) を表すenum class (列挙型クラス) である `TrafficLight` を作成してください。信号機の状態を引数にとり、その状態の継続時間 (秒単位) を返す関数を作成します。
 
-## Task 2
+## タスク2
 
-Implement a templated function `clamp` that takes a minimum value, a maximum value, and a value to clamp. If the value is less than the minimum, return the minimum. If the value is greater than the maximum, return the maximum. Otherwise, return the value. Test the function with different types like int, float, and double.
+比較対象の値、最小値、最大値を引数にとるテンプレート関数 `clamp` を実装してください。値が最小値より小さい場合は最小値、値が最大値より大きい場合は最大値、これ以外の場合は値を返します。int、float、doubleなどのさまざまな型でこの関数をテストしてください。
 
-## Task 3
+## タスク3
 
-Write a constant called `pi` that represents the number pi using `constexpr`. Then write a `consteval` function `circumference` that computes the circumference of a circle of a given radius that uses this `pi` constant. Use a tool like [godbolt.org](https://godbolt.org/) to observe what the compiled code looks like.
+`constexpr` を使用して、円周率の値を表す定数 `pi` を書いてください。次に、この `pi` 定数を使用して、指定された半径の円周を計算する `consteval` 関数 `circumference` を作成します。[godbolt.org](https://godbolt.org/) などのツールを使用して、コンパイルされたコードがどのように表示されるか見てみましょう。

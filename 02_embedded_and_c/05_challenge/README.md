@@ -1,8 +1,8 @@
-# Challenge 5
+# チャレンジ5
 
-## Task 1
+## タスク1
 
-Let's assume we have the following C header file, and we want to call `double_array` from within our C++ program:
+次のCヘッダーファイルがあり、C++プログラムから `double_array` を呼び出すとします。
 
 ```c
 // double_array.h
@@ -16,8 +16,8 @@ void double_array(int *arr, size_t size);
 #endif // DOUBLE_ARRAY_H
 ```
 
-Wrap the `double_array` declaration within the C header file, so it can be used from within a C++ program.
+Cヘッダーファイル内で `double_array` 宣言をラップして、C++プログラムでこの関数を使用できるようにしてください。
 
-## Task 2
+## タスク2
 
-Use `double_array` from within a C++ program `main.cpp` by calling it on the underlying data from a `std::array`.
+C++プログラムの `main.cpp` で `double_array` を呼び出し、`std::array` に含まれるデータを引数で渡してください。

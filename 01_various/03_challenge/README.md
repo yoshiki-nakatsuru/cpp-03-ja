@@ -1,14 +1,14 @@
-# Challenge 3
+# チャレンジ3
 
-Create a variadic function template named allTrue that takes a variable number of boolean arguments and returns true if all arguments are true, and false otherwise. If no arguments are given, the function should return true.
+可変数のブール型引数を受け取り、すべての引数がtrueの場合はtrue、それ以外の場合はfalseを返す可変引数の関数テンプレート `allTrue` を作成してください。引数が指定されていない場合は、trueを返すようにします。
 
-Example usage:
+使用例:
 
 ```cpp
-// Should output: 1 (true)
+// 出力: 1 (true)
 std::cout << allTrue(true, true, true) << std::endl;
-// Should output: 0 (false)
+// 出力: 0 (false)
 std::cout << allTrue(true, false, true) << std::endl;
-// Should output: 1 (true)
+// 出力: 1 (true)
 std::cout << allTrue() << std::endl;
 ```
