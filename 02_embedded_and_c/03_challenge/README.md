@@ -10,4 +10,4 @@
 
 ## タスク3
 
-`constexpr` を使用して、円周率の値を表す定数 `pi` を書いてください。次に、この `pi` 定数を使用して、指定された半径の円周を計算する `consteval` 関数 `calculateCircumference` を作成します。[godbolt.org](https://godbolt.org/) などのツールを使用して、コンパイルされたコードがどのように表示されるか見てみましょう。
+`constexpr` を使用して、円周率の値を表す定数 `pi` を書いてください。次に、この `pi` 定数を使用して、指定された半径の円周を計算する `constexpr` 関数 `calculateCircumference` を作成します。[godbolt.org](https://godbolt.org/) などのツールを使用して、コンパイルされたコードがどのように表示されるか見てみましょう。
