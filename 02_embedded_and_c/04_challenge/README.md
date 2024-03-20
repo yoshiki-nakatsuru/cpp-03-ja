@@ -69,7 +69,7 @@ ar -rcs libledcontroller.a led_controller.o
 C++プログラムを作成したら、最後にC++プログラムをコンパイルして静的ライブラリ `libledcontroller.a` をリンクします。
 
 ```bash
-g++ -o main -L. -lledcontroller main.cpp led_controller.cpp
+g++ -o main main.cpp led_controller.cpp -L. -lledcontroller
 ```
 
 `-L` フラグではライブラリを含むパスを指定します。`-l` フラグではライブラリの名前を指定します (ライブラリの先頭の「lib」と末尾の「.a」を省略しています)。
